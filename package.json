@@ -1,0 +1,22 @@
+{
+  "name": "mqtt-dockercont",
+  "version": "1.0.0",
+  "description": "assignment mqtt node HSL traffic docker",
+  "main": "index.js",
+  "dependencies": {
+    "mqtt": "^4.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "-"
+  },
+  "keywords": [
+    "-"
+  ],
+  "author": "feelikskilpi",
+  "license": "ISC"
+}

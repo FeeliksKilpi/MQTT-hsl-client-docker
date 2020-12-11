@@ -1,0 +1,45 @@
+Sending build context to Docker daemon  31.23kB
+Step 1/8 : FROM node:12-slim
+12-slim: Pulling from library/node
+babf97a3f00a: Pull complete 
+d81eb1809d95: Pull complete 
+3f72ec46a92e: Pull complete 
+a8a4b5f7319f: Pull complete 
+39dcde4a46ff: Pull complete 
+Digest: sha256:d1cad9227e3abd64f5fce754151bf9a452c60ae03430f8557367d7cffc41d2a9
+Status: Downloaded newer image for node:12-slim
+ ---> 1ca6947f3d2c
+Step 2/8 : WORKDIR /usr/src/app
+ ---> Running in 4aeb0e9d3cf0
+Removing intermediate container 4aeb0e9d3cf0
+ ---> 563ef3b6e10b
+Step 3/8 : ENV PORT=80
+ ---> Running in 99c836f94517
+Removing intermediate container 99c836f94517
+ ---> 8c70ea2ea39b
+Step 4/8 : COPY package*.json .
+ ---> b4f6dd9e2ad0
+Step 5/8 : RUN npm install
+ ---> Running in 885ce9d5741e
+npm WARN saveError ENOENT: no such file or directory, open '/usr/src/app/package.json'
+npm WARN enoent ENOENT: no such file or directory, open '/usr/src/app/package.json'
+npm WARN app No description
+npm WARN app No repository field.
+npm WARN app No README data
+npm WARN app No license field.
+
+up to date in 0.567s
+found 0 vulnerabilities
+
+Removing intermediate container 885ce9d5741e
+ ---> 42016bda48d4
+Step 6/8 : COPY . .
+ ---> f94adaca600b
+Step 7/8 : EXPOSE 80
+ ---> Running in 1a0e24d930fd
+Removing intermediate container 1a0e24d930fd
+ ---> ae97aff934a9
+Step 8/8 : CMD [ "node", "index.js" ]
+ ---> Running in bf5d2f98e84d
+Removing intermediate container bf5d2f98e84d
+
